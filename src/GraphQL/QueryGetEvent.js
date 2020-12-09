@@ -4,6 +4,7 @@ export default gql(`
 query($id: ID!) {
   getEvent(id: $id) {
     id
+    _version
     name
     where
     when

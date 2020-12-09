@@ -29,7 +29,7 @@ const App = () => (
   </Router>
 );
 
-const client = new AWSAppSyncClient({
+export const client = new AWSAppSyncClient({
   url: appSyncConfig.aws_appsync_graphqlEndpoint,
   region: appSyncConfig.aws_appsync_region,
   auth: {

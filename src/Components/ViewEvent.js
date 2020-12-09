@@ -6,6 +6,7 @@ import moment from 'moment';
 
 import QueryGetEvent from "../GraphQL/QueryGetEvent";
 import EventComments from "./EventComments";
+import UpdateEvent from "./UpdateEvent";
 
 class ViewEvent extends Component {
 
@@ -23,6 +24,9 @@ class ViewEvent extends Component {
                             <div className="extra"><i className="icon clock"></i>{moment(event.when).format('LT')}</div>
                             <div className="extra"><i className="icon marker"></i>{event.where}</div>
                             <div className="description">{event.description}</div>
+                            <div className="extra">
+                                <UpdateEvent event={event} />
+                            </div>
                             <div className="extra">
                                 <EventComments eventId={event.id} comments={event.comments} />
                             </div>
